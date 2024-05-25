@@ -5,11 +5,13 @@ A simple Sand Simulation made as a challenge for myself, Turned out to be one of
 ![Showcase image](.github/image.png)
 
 ## Controls
-|     Button     |      Action      |
-|----------------|------------------|
-| Mouse Button 1 |  Place down sand |
-| 1              |  Switch to air   |
-| 2              |  Switch to sand  |
-| 3              |  Switch to mud   |
-| 4              |  Switch to water |
-| F5             |  Reload shader   |
+|     Button        |      Action         |
+|-------------------|---------------------|
+| Mouse Button 1    |  Place down sand    |
+| Mouse Scroll Up   | Increase brush size |
+| Mouse Scroll Down | Decrease brush size |
+| 1                 |  Switch to air      |
+| 2                 |  Switch to sand     |
+| 3                 |  Switch to mud      |
+| 4                 |  Switch to water    |
+| F5                |  Reload shader      |
