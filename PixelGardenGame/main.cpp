@@ -24,7 +24,7 @@ private:
     unsigned int frames = 0;
 
     sf::Font font;
-       
+    
     // UI
     sf::Text fpsText;
     sf::Text pixelCountText;
@@ -60,7 +60,6 @@ public:
         }
 
         gridShader.setUniform("resolution", sf::Glsl::Vec2(WINDOW_WIDTH, WINDOW_HEIGHT));
-        gridShader.setUniform("time", clock.getElapsedTime().asMilliseconds());
 
         gridTexture.create(WINDOW_WIDTH, WINDOW_HEIGHT);
         gridSprite.setTexture(gridTexture);
@@ -81,7 +80,6 @@ public:
             }
 
             gridShader.setUniform("resolution", sf::Glsl::Vec2(WINDOW_WIDTH, WINDOW_HEIGHT));
-            gridShader.setUniform("time", clock.getElapsedTime().asMilliseconds());
         }
 
         if (event.type == sf::Event::KeyPressed) {
@@ -181,7 +179,6 @@ public:
     }
 
     void draw() {
-        gridShader.setUniform("time", clock.getElapsedTime().asMilliseconds());
         updateGridTexture();
         window.draw(gridSprite, &gridShader);
 

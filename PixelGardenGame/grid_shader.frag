@@ -1,6 +1,5 @@
 uniform sampler2D gridTexture;
 uniform vec2 resolution;
-uniform float time;
 
 void main() {
     vec2 uv = gl_FragCoord.xy / resolution;
@@ -14,7 +13,7 @@ void main() {
 
     if (color.r == 1.0) { // sand
         baseColor = vec3(1.0, 1.0, 0.0);
-        tintAmount = 0.45*time;
+        tintAmount = 0.45;
     } else if (color.g == 1.0) { // mud
         baseColor = vec3(0.5, 0.25, 0.0);
         tintAmount = 0.3;
